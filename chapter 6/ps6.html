@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //q1//
+        let runAgain = true;
+
+        const canDrive = (age) => {
+            return age >= 18 ? true : false
+        }
+
+        while (runAgain) {
+            let age = prompt("Enter your age")
+            age = Number.parseInt(age)
+            if (age < 0) {
+                //q3//
+                console.error("Please enter a valid age");
+                break;
+            }
+
+            if (canDrive(age)) {
+                alert("Yes you can drive")
+            }
+            else {
+                alert("You cannot drive")
+            }
+            //q2//
+            runAgain = confirm("Do you want to play again?")
+        }
+
+            //q5//
+        let color = prompt("Enter the page background color")
+        document.body.style.background = color
+    </script>
+</body>
+
+</html>

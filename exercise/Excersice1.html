@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number Game</title>
+</head>
+<body>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let guess;
+        let numberOfGuesses = 0;
+
+        while (true) {
+            guess = parseInt(prompt("Guess the number (between 1 and 100):"));
+            numberOfGuesses++;
+
+            if (guess === randomNumber) {
+                alert("Congratulations! You guessed it right.");
+                break;
+            } else if (guess < randomNumber) {
+                alert("Too low! Try again.");
+            } else if (guess > randomNumber) {
+                alert("Too high! Try again.");
+            } else {
+                alert("Please enter a valid number.");
+            }
+        }
+
+        let score = 100 - numberOfGuesses + 1;
+        alert(`You guessed the number in ${numberOfGuesses} attempts. Your score is ${score}.`);
+    </script>
+</body>
+</html>
